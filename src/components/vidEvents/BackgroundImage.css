@@ -1,0 +1,15 @@
+.background-image {
+    background-image: url("../../assets/images/Ultimate-video-production-equipment-906x515.jpg");
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 50vh; /* Default for desktop */
+    margin-bottom: 50px;
+  }
+  
+  @media (max-width: 768px) {
+    .background-image {
+      height: 30vh !important; /* Adjust height for mobile */
+    }
+  }
+  

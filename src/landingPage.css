@@ -1,0 +1,84 @@
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #111111;
+  color: white;
+  font-family: 'Arial', sans-serif;
+  min-height: 100vh;
+}
+
+.landing-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.logo-container {
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+.logo {
+  /* Reduce the minimum size and viewport width percentage */
+  font-size: clamp(0.1rem, 6vw, 2.5rem);
+  /* Reduce letter spacing on smaller screens */
+  letter-spacing: clamp(1px, 1.5vw, 8px);
+  text-transform: uppercase;
+  margin: 0;
+  font-weight: 300;
+  /* Ensure the text stays within the container */
+  max-width: 100%;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+}
+
+/* Additional breakpoint for very small screens if needed */
+@media screen and (max-width: 390px) {
+  .logo {
+    font-size: 0.1rem;
+    letter-spacing: 1px;
+  }
+}
+
+.services-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.service-link {
+  color: white;
+  text-decoration: none;
+  font-size: 1.4rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+  text-align: center;
+  position: relative;
+  padding: 10px 0;
+}
+
+.service-link:hover {
+  color: #ff4d4d;
+  transform: scale(1.05);
+}
+
+.service-link::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 1px;
+  bottom: 0;
+  left: 0;
+  background-color: #ff4d4d;
+  transition: width 0.3s ease;
+}
+
+.service-link:hover::after {
+  width: 100%;
+}
+
